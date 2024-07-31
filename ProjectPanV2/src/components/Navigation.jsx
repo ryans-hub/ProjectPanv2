@@ -8,16 +8,13 @@ function Navigation() {
         <nav>
             <ul>
                 <li>
-                    <Link to='/'>Home</Link>
+                    <Link to='/'>About Me</Link>
                 </li>
                 <li>
-                    <Link to='/about'>About Me</Link>
+                    <Link to='/project'>Projects</Link>
                 </li>
                 <li>
-                    <Link to='/projects'>Projects</Link>
-                </li>
-                <li>
-                    <Link to='/contacts'>Contact Me</Link>
+                    <Link to='/contact'>Contact Me</Link>
                 </li>
             </ul>
         </nav>

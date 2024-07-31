@@ -1,31 +1,29 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header"
+import About from "./pages/About"
+import Project from "./pages/Project"
+import Contact from "./pages/Contact"
 
-const App = () => {
+function App() {
   return (
     <div>
-      <header>
-        <h1>Ryan Pan</h1>
-        <h2>Aspiring Fullstack Engineer</h2>
-        <p>
-          I study web development through ASU's sponsored Coding Bootcamp, building front-end/back-end products.
-        </p>
-        <nav>
-          <ul>
-            <li>
-              <a href="#About-Me">About Me</a>
-            </li>
-            <li>
-              <a href="#Projects">Projects</a>
-            </li>
-            <li>
-              <a href="#Contact-Me">Contact Me</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Router>
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/project" element={<Project />} />
+          </Routes>
+        </main>
 
-      <main>
+
+      </Router>
+ 
+
+      {/* <main>
         <section id="About-Me">
           <article>
             <p>
@@ -81,7 +79,7 @@ Often, there is a limited selection of hikes; many of which are dangerous for a 
             I'm open to exploring new opportunities and welcome any chance to contribute my skills and expertise. Please feel free to contact me at any time; my inbox is always open.
           </p>
         </section>
-      </main>
+      </main> */}
     </div>
   );
 };
